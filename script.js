@@ -1,3 +1,5 @@
+var weatherDesc;
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -17,39 +19,44 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kurukshetra'
          var feelsLike= response.feels_like
          
         var humid = response.humidity 
-        console.log(humid<=83);
+       
         if(humid<=83)
         {
-            weatherDesc.innerHTML="It's going to be foggy today!<br>Try travelling using public transportation or by walking;)"
+            weatherDesc="It's going to be foggy today!Try travelling using public transportation or by walking;)"
         }
         else if(humid<=100)
         {
-            weatherDesc.innerHTML="It's going to be rainy today!<br>Do carry an umbrella;)"
+            weatherDesc="It's going to be rainy today!Do carry an umbrella;)"
         }
         else if(temp<68)
         {
-            weatherDesc.innerHTML="Its pretty cold today!<br>Make sure to deck your self in the warmest sweaters;)"
+            weatherDesc="Its pretty cold today!Make sure to deck your self in the warmest sweaters"
         }
         else if(temp>77)
         {
-            weatherDesc.innerHTML="Its sunny and pleasent today!<br>A great day to take yourself on a date;)"
+            weatherDesc="Its sunny and pleasent today!A great day to take yourself on a date;)"
         }
         else if(temp<113)
         {
-            weatherDesc.innerHTML="Its pleasent outside!<br>Wear cotton clothes and light woolens;)"
+            weatherDesc="Its pleasent outside!Wear cotton clothes and light woolens;)"
         }
         else if(temp<=86)
         {
-            weatherDesc.innerHTML="Its hot today!<br>Make sure to wear light cotton clothes;)"
+            weatherDesc="Its hot today!Make sure to wear light cotton clothes;)"
         }
         else{
-            weatherDesc.innerHTML="Pleasent day to die!"
+            weatherDesc="Pleasent day to die!"
         }
-     
+    
 
+        myFunction();
     })
     
 
 	.catch(err => console.error(err));
+    function myFunction() {
+        alert(weatherDesc);
+      }
+      
     
  
