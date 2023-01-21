@@ -46,7 +46,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kurukshetra'
             weatherDesc.innerHTML="Pleasent day to die!"
         }
      
-
+    
     })
     
 
